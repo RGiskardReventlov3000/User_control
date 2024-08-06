@@ -41,7 +41,7 @@ $SMTPUseAuthentication = $false     # Использовать авториза�
 $SMTPUsername = ""                  # Имя пользователя SMTP
 $SMTPPassword = ""                  # Пароль пользователя SMTP
 $Recipient = "it@corp.local"    # Получатель уведомления
-$EmailFrom = "expired.users.scheduler@it@corp.local" # Отправитель уведомления
+$EmailFrom = "expired.users.scheduler@corp.local" # Отправитель уведомления
 
 
 
