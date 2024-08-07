@@ -7,7 +7,6 @@ $WhitelistPath = "C:\ExpiredUsers\whitelist.txt" # Файл белого спи�
 $UsersToDisablePath = "C:\ExpiredUsers\UsersToDisable.txt" # Файл пользователей к блокировке
 $SMTPServer = "1.1.1.1"    # SMTP сервер
 $SMTPPort = 25     # Порт SMTP сервера
-$SMTPUseAuthentication = $false     # Использовать авторизацию SMTP или нет
 $Recipient = "it@corp.local"    # Получатель уведомления
 $EmailFrom = "expired.users.scheduler@it@corp.local" # Отправитель уведомления
 
