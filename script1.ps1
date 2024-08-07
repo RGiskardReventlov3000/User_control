@@ -8,8 +8,6 @@ $UsersToDisablePath = "C:\ExpiredUsers\UsersToDisable.txt" # Файл польз
 $SMTPServer = "1.1.1.1"    # SMTP сервер
 $SMTPPort = 25     # Порт SMTP сервера
 $SMTPUseAuthentication = $false     # Использовать авторизацию SMTP или нет
-$SMTPUsername = ""                  # Имя пользователя SMTP
-$SMTPPassword = ""                  # Пароль пользователя SMTP
 $Recipient = "it@corp.local"    # Получатель уведомления
 $EmailFrom = "expired.users.scheduler@it@corp.local" # Отправитель уведомления
 
@@ -63,12 +61,6 @@ $MailParams = @{
     Encoding = [System.Text.Encoding]::UTF8
     }
 
-# Добавление параметров аутентификации, если необходимо
-if ($SMTPUseAuthentication) {
-    $SecurePassword = ConvertTo-SecureString $SMTPPassword -AsPlainText -Force
-    $Credentials = New-Object System.Management.Automation.PSCredential ($SMTPUsername, $SecurePassword)
-    $MailParams.Credential = $Credentials
-}
 
 # Отправка письма
 try {
